@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulations</title>
+    <style>
+        .h2{
+            text-align: center;
+            text-decoration:dotted;
+        }
+        body{
+            background-color:antiquewhite;
+            align-content: center;
+            align-items: center;
+        }
+        .body{
+            background-color: lightgrey;
+            width: 800px;
+            border-radius: 15px;
+            padding: 50px;
+            margin: 60px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+    <h2 class="h2">Paragraph</h2>
+    <div >
+        <p id="ko" onmouseover="func()" onmouseout="funct()">
+            A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.
+        </p>
+    </div><hr/>
+    <h2 class="h2">Button</h2>
+    <div>
+        <button id="kri" onmouseover="but()" onmouseout="butt()">Clcik here</button>
+    </div><hr/>
+    <h2 class="h2">Input</h2>
+    <div>
+        <input type="text" id="myInput">
+        
+        <button onclick="updateTextbox()">Update</button>
+        
+        <p id="myParagraph">Updated Content</p>
+        
+    </div><hr/>
+    <h2 class="h2">List</h2>
+    <div>
+        <ul id="myList">
+            <li onmouseover="Item(this)" onmouseout="unItem(this)">Item 1</li>
+            <li onmouseover="Item(this)" onmouseout="unItem(this)">Item 2</li>
+            <li onmouseover="Item(this)" onmouseout="unItem(this)">Item 3</li>
+        </ul>
+    </div>
+</div>
+    <script type="text/javascript">
+        function func(){
+            document.getElementById("ko").style.color="red";
+        }
+        function funct(){
+            document.getElementById('ko').style.color="black";
+        }
+        function but(){
+            document.getElementById('kri').innerHTML="Changed content";
+        }
+        function butt(){
+            document.getElementById('kri').innerHTML="Click here";
+        }
+        function updateTextbox() {
+            const inputTextbox = document.getElementById("myInput");
+            const paragraph = document.getElementById("myParagraph");
+            inputTextbox.value = paragraph.innerHTML;
+        }
+        function Item(item) {
+            item.style.fontWeight = "bold";
+            item.style.color = "red";
+        }
+        
+        function unItem(item) {
+            item.style.fontWeight = "normal";
+            item.style.color = "black";
+        }
+        
+    </script>
+</body>
+</html>
